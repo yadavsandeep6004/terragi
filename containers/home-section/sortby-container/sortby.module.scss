@@ -1,0 +1,31 @@
+@import "../../../styles/_themes";
+
+.wrapper {
+    gap: 5px;
+    width: fit-content;
+    align-items: flex-start;
+
+    .sort__dropdown {
+        display: inline-flex !important;
+        border: none !important;
+        padding: 0 !important;
+        background: transparent !important;
+        min-height: 0 !important;
+
+        &:focus {
+            border: none !important;
+        }
+
+        svg {
+            margin-left: 4px !important;
+        }
+
+        &>div:last-child {
+            top: 30px !important;
+            left: -30px !important;
+
+            border: none !important;
+            border-radius: 4px !important;
+        }
+    }
+}

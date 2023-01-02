@@ -1,0 +1,165 @@
+@import "../../styles/themes";
+
+.text__heading_xxl {
+    font-size: 7.2rem;
+    line-height: 8rem;
+    letter-spacing: -0.201rem;
+    color: $headingPrimary;
+    font-weight: 700;
+}
+
+.text__heading_xl {
+    font-size: 5rem;
+    line-height: 5.9rem;
+    letter-spacing: -0.126rem;
+    color: $headingPrimary;
+    font-weight: 700;
+}
+
+.text__heading_lg {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    font-weight: 500;
+}
+
+.text__heading_md {
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+    letter-spacing: -0.1rem;
+    font-weight: 500;
+
+    @include respond("mobile") {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+// @mixin text__heading_sm() {
+.text__heading_sm {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.1rem;
+    font-weight: 500;
+
+    @include respond("mobile") {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 500;
+    }
+}
+
+.text__subheading_lg {
+    font-size: 2rem;
+    line-height: 3.2rem;
+}
+
+.text__subheading_md {
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+.text__subheading_sm {
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.text__title {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $title;
+}
+
+.text__body {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    color: $body;
+}
+
+.text__label_lg {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: -0.5px;
+    color: $labelPrimary;
+    font-weight: 400;
+}
+
+.text__label_md {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: $labelPrimary;
+    font-weight: 400;
+}
+
+.text__label_sm {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: $labelPrimary;
+    font-weight: 400;
+}
+
+@for $i from 1 through 7 {
+    .text__#{$i * 100} {
+        font-weight: #{$i * 100};
+    }
+}
+
+.text__white {
+    color: $white;
+}
+
+.text__black {
+    color: $black;
+}
+
+.text__cool_black {
+    color: $coolBlack;
+}
+
+.text__heading_primary {
+    color: $headingPrimary;
+}
+
+.text__heading_secondary {
+    color: $headingSecondary;
+}
+
+.text__label {
+    color: $labelPrimary;
+}
+
+.text__title_primary {
+    color: $title;
+}
+
+.text__body_primary {
+    color: $body;
+}
+
+.text__secondary {
+    color: $secondaryColor;
+}
+
+.text__primary {
+    color: $primaryColor;
+}
+
+.text__blue_500 {
+    color: $blue500;
+}
+
+.text__grey100 {
+    color: $grey100;
+}
+
+.text__grey500 {
+    color: $grey500;
+}
+
+.text__roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+.text__poppins {
+    font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,120 @@
+@import "../../styles/_themes";
+
+.signup__side_left {
+    padding: 42px;
+
+    & > div:first-child {
+        margin-bottom: 43px;
+
+        @include respond("mobile") {
+            margin-bottom: 16px;
+
+            & > p:first-child {
+                font-size: 2.3rem;
+                line-height: 2.8rem;
+            }
+
+            & > p:last-child {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+        }
+    }
+
+    .signup__side_left_mobile_input_container {
+        & > div:nth-child(1),
+        & > div:nth-child(2) {
+            min-width: 200px;
+        }
+
+        .signup__side_left_mobile_input {
+            & > div:nth-child(1) {
+                max-width: 90px;
+            }
+
+            & > div:nth-child(2) {
+                width: 100%;
+            }
+        }
+    }
+
+    .signup__side_left_dob_input_container {
+        & > div:nth-child(1),
+        & > div:nth-child(2) {
+            min-width: 237px;
+        }
+    }
+
+    .submit__button {
+        height: 56px !important;
+    }
+
+    @include respond("mobile") {
+        padding: 14px 6px;
+    }
+}
+
+.childOtp {
+    width: 100%;
+
+    align-content: space-between;
+    gap: 2.5rem;
+
+    flex: 1;
+
+    & > div {
+        & > input {
+            width: 100% !important;
+            height: 100%;
+            border-radius: 6px !important;
+            border: 1px solid $borderColor;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        height: 40px;
+        flex: 2;
+    }
+}
+
+.signup__side_right {
+    background-image: url("../../assets/images/signup-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    max-width: 318px;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    overflow: hidden;
+    margin-left: auto;
+
+    .signup__background {
+        margin-top: auto;
+        height: 100%;
+        width: 100%;
+        order: 2;
+    }
+
+    .signup__text_container {
+        padding: 54px 24px 10px;
+
+        .text__wrapper {
+            height: 100%;
+        }
+        .benefitlist{
+            list-style: disc;
+            font-size: medium;
+            margin-top: 10px;
+            li{
+                color: white;
+                padding-top:10px;
+            }
+        }
+    }
+
+    $small: 300px;
+
+    @include respond("tab") {
+        display: none;
+    }
+}

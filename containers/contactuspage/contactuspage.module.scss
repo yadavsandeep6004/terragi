@@ -1,0 +1,28 @@
+@import "../../styles/_themes";
+
+.signin__container {
+    &__mobile__container {
+        &_input {
+
+            &>div:nth-child(1) {
+                max-width: 90px;
+            }
+
+            &>div:nth-child(2) {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .career{
+        .signin__container{
+            padding: 30px;
+        }
+    }
+}
+
+
+

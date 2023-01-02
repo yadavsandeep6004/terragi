@@ -1,0 +1,43 @@
+@import "../../styles/_themes";
+
+.dob_wrapper {
+    display: flex;
+    gap: 2px;
+    width: 100%;
+}
+
+.select__primary {
+    width: 100%;
+
+
+    select {
+        height: 40px;
+        padding: 0px 8px;
+
+        display: inline-flex !important;
+        align-items: center;
+        flex-wrap: wrap !important;
+
+        border: 1px solid $borderColor;
+        border-radius: 6px !important;
+        width: fit-content;
+
+        background-color: $white;
+
+        @extend .text_16_700;
+    }
+
+    option {
+        width: 100%;
+        background-color: white !important;
+        border-radius: 8px !important;
+        border: none !important;
+        top: 115% !important;
+        min-height: fit-content;
+
+
+        @include respond("tab") {
+            max-height: 200px !important;
+        }
+    }
+}

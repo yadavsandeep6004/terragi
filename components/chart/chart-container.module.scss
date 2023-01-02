@@ -1,0 +1,23 @@
+@import "../../styles/themes";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: $white;
+
+  .title {
+    font-size: 14px;
+    line-height: 16px;
+    color: $coolBlack;
+    padding: 16px;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  .content {
+    padding: 16px;
+    display: flex;
+    flex-grow: 1;
+    align-content: center;
+  }
+}

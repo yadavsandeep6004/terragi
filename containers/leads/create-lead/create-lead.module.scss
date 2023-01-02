@@ -1,0 +1,49 @@
+@import "../../../styles/_themes";
+
+
+.modal_wrapper {
+    max-width: 775px;
+    padding: 24px;
+
+    .form_wrapper {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 32px;
+
+
+        @include respond("mobile") {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .button_wrapper {
+        display: flex;
+        justify-content: flex-end;
+        height: 54px;
+
+        margin-top: 24px;
+
+
+        .btn_cancel {
+            border: none !important;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 157px;
+
+            font-weight: 500 !important;
+        }
+    }
+
+    .budget_input {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    @include respond("mobile") {
+        padding: 12px;
+    }
+}

@@ -1,0 +1,97 @@
+@import "../../styles/themes";
+
+.wrapper {
+    border-radius: 6px !important;
+
+    .select__primary {
+        display: inline-flex !important;
+        align-items: center;
+        flex-wrap: wrap !important;
+
+        width: 100%;
+        min-width: 100% !important;
+
+        border: 1px solid $borderColor;
+        border-radius: inherit !important;
+        height: fit-content;
+
+        @extend .text_16_700;
+
+        &>span {
+            margin-left: auto !important;
+        }
+
+        span {
+            @extend .text_16_700;
+        }
+
+        &:hover {
+            border-radius: 6px !important;
+            border-color: $coolBlack !important;
+        }
+
+        &>svg {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+        }
+
+
+        &>div:last-child {
+            position: absolute !important;
+            width: 100%;
+            background-color: $white !important;
+            border-radius: 8px !important;
+            border: none !important;
+            top: 115% !important;
+            min-height: fit-content;
+            max-height: 400px;
+            overflow: auto;
+
+            &>div {
+                span {
+                    @extend .text_16_700
+                }
+            }
+
+            @include respond("tab") {
+                max-height: 200px !important;
+            }
+        }
+    }
+    .select__primary>div>div:hover{
+        background-color: $primaryColor !important;
+        color: white !important;
+    }
+}
+
+
+.dropdown__icon {
+    margin-left: auto;
+}
+
+
+.dropdown__label__wrapper {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px !important;
+    max-width: fit-content;
+    background: $blue100 !important;
+    box-shadow: none !important;
+    background-color: $blue100;
+
+    padding: 6px 8px;
+    gap: 12px;
+}
+
+.dropdown_items {
+    @extend .text_16_700;
+
+    .divider .text,
+    span {
+        @extend .text_16_700;
+    }
+}

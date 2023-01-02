@@ -1,0 +1,250 @@
+@import "../../styles/colors";
+@import "../../styles/themes";
+
+.card_style {
+    overflow: hidden;
+    margin-right: auto;
+    box-shadow: 0px 8px 16px 0px rgba(50, 50, 71, 0.08) !important;
+}
+
+.wrapper {
+    .img_wrapper {
+        width: 100%;
+        min-height: 100%;
+        max-width: 237px;
+
+        border-radius: 15px 0px 0px 15px;
+
+        .image_hidden_div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(179.11deg,
+                    rgba(255, 255, 255, 0) 21.54%,
+                    rgba(37, 37, 37, 0.830998) 83.8%,
+                    #373435 96.47%);
+        }
+
+        .gallery_wrapper {
+            background: $darkBackground;
+            width: 57px;
+            height: 24px;
+            border-radius: 15px;
+
+            top: 8px;
+            left: 8px;
+        }
+
+        .view_wrapper {
+            display: flex;
+            background: $darkBackground;
+            width: 100%;
+            max-width: 162px;
+            height: 24px;
+            border-radius: 15px;
+
+            bottom: 15px;
+            left: 8px;
+
+            svg {
+                @include respond("tab") {
+                    min-width: 14px;
+                    min-height: 10px;
+                }
+            }
+
+            &_text {
+                font-size: 10px;
+            }
+
+            @include respond("tab") {
+                padding: 4px;
+                // max-width: 103px;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+
+        @include respond("tab") {
+            max-width: 100%;
+        }
+    }
+
+    .details_content_wrapper {
+        width: 75%;
+
+        @include respond("tab") {
+            width: 100%;
+        }
+    }
+
+    .details_wrapper {
+        position: relative;
+        width: 100%;
+        padding: 24px;
+
+        .name_wrapper {
+            margin-bottom: 16px;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .details_card {
+            .detail_value {
+                margin-bottom: 6px;
+
+                @include respond("tab") {
+                    font-size: 12px;
+                }
+            }
+
+            .detail_label {}
+
+            @include respond("tab") {
+                margin-bottom: 8px;
+            }
+        }
+
+        .grid {
+            display: grid;
+            gap: 12px;
+            grid-row-gap: 12px;
+            grid-column-gap: 64px;
+            grid-template-columns: repeat(3, auto);
+
+            @include respond("tab") {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 0px;
+            }
+
+            .grid__row {
+                padding: 0;
+            }
+        }
+
+        .note {
+            font-style: italic !important;
+            margin-top: 36px;
+
+            @include respond("tab") {
+                font-size: 10px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+        }
+        .note>span{
+            color: black;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .rejected_text {
+            margin-top: 72px;
+
+            @include respond("tab") {
+                font-size: 10px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .bookmark_icon {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+
+            @include respond("tab") {
+                position: static;
+            }
+        }
+
+        .shown_number,
+        .view_number_btn {
+            display: flex !important;
+            background: $white !important;
+            margin: 0;
+            width: 100%;
+            max-width: 133px;
+            height: 28px;
+            border-radius: 5px !important;
+            font-size: 14px !important;
+            line-height: 21px;
+            color: $primaryColor !important;
+            border: 1px solid $primaryColor;
+
+            @include respond("tab") {
+                max-width: 100%;
+            }
+        }
+
+        .shown_number {
+            padding: 0px !important;
+
+            svg {
+                margin-left: 2px;
+            }
+        }
+
+        .facing_field {
+            margin-top: auto;
+        }
+
+        .bookmark_icon[data-checked="true"] {
+            path {
+                fill: $primaryColor;
+            }
+        }
+
+        @include respond("tab") {
+            padding: 12px 8px;
+            display: block !important;
+        }
+    }
+
+    .bookmark_icon {
+        width: 14px;
+        height: 19px;
+
+        @include respond("tab") {
+            top: 0px;
+            right: 13px;
+        }
+    }
+
+    .lead_show_box,
+    .lead_show_box2 {
+        display: flex !important;
+        border-radius: 15px;
+        background: #ebf1fd;
+        height: 30px;
+
+        @include respond("tab") {
+            display: none;
+        }
+    }
+
+    .lead_show_box2 {
+        display: none !important;
+
+        @include respond("tab") {
+            display: flex;
+        }
+    }
+}
+
+.gallery_modal {
+    height: 90vh;
+    top: 50%;
+    transform: translateY(-51%);
+
+    &>div:first-child {
+        height: 100%;
+
+        &>img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

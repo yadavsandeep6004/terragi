@@ -1,0 +1,39 @@
+@import "../../styles/_themes";
+
+.dimmer_container {
+    background: rgba(11, 19, 42, 0.7);
+}
+
+.modal__container {
+    position: relative;
+    border-radius: 10px !important;
+
+    & > div:first-child {
+        padding: 0px !important;
+
+        @include respond("tab") {
+            padding: 0px !important;
+        }
+    }
+
+    & > div {
+        border-radius: 10px !important;
+    }
+
+    .close_icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+
+        svg path {
+            fill: $black;
+        }
+    }
+
+    .close_icon[data-isDark="true"] {
+        svg path {
+            fill: $labelPrimary;
+        }
+    }
+}

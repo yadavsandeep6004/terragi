@@ -1,0 +1,127 @@
+@import "../../../styles/_themes";
+
+.top_section {
+    z-index: 10;
+}
+
+.wrapper {
+    background: $white;
+    z-index: 10;
+    padding-top: 32px;
+    margin-bottom: 20px;
+
+    @include respond("tab") {
+        padding-top: 10px
+    }
+
+}
+
+.search_wrapper {
+    gap: 38px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    z-index: 10;
+
+    @include respond("mobile") {
+        padding: 10px 16px;
+        gap: 16px;
+    }
+
+    .search_bar {
+        display: inline-flex;
+        max-width: 776px;
+        align-items: center;
+    }
+
+}
+
+.filters_wrapper {
+    padding: 8px 40px;
+    min-height: 56px;
+    background: #F2F2F2;
+    width: 100%;
+
+    @include respond("mobile") {
+        padding: 8px 16px;
+        justify-content: initial;
+    }
+
+    .area_dropdown {
+        max-width: 190px;
+    }
+}
+
+.mini_filter_wrapper {
+    .mini_filter_dropdown {
+        display: flex !important;
+        align-items: center;
+        width: 100%;
+
+        max-width: fit-content;
+        background-color: $white !important;
+        border: 1px solid $borderColor !important;
+        border-radius: 6px !important;
+        height: 40px !important;
+
+        &>div:last-child {
+            margin-top: 4px !important;
+            max-height: 400px;
+            overflow: auto;
+            border-radius: 6px !important;
+        }
+    }
+
+
+
+    .budget_input_dropdown {
+        padding: 11px 16px;
+
+        &>div:first-child {
+            font-weight: 500;
+            color: #333;
+        }
+
+        &>div:last-child {
+            display: none !important;
+        }
+    }
+
+    .hide_dropdown {
+        @include respond("mobile") {
+            display: none !important;
+        }
+    }
+}
+
+.more_filters_text {
+    display: none;
+
+    @include respond("mobile") {
+        display: inline-block
+    }
+}
+
+.apply_filter {
+    @include respond("mobile") {
+        margin-left: auto;
+    }
+}
+
+.popper {
+    width: 100%;
+    max-width: 500px;
+
+    &>div:first-child {
+        width: 100%;
+        max-width: 100% !important;
+        background-color: $white !important;
+        border-radius: 8px !important;
+        border: none !important;
+        margin-top: 3px !important;
+        padding: 15px 20px;
+
+        &::before {
+            display: none !important;
+        }
+    }
+}

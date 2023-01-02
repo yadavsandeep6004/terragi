@@ -1,0 +1,43 @@
+@import "../../styles/colors";
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px !important;
+
+    padding: 10px 14px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    font-family: 'Poppins' !important   ;
+}
+
+.btn_solid {
+    background: $primaryColor !important;
+    color: $white !important;
+}
+
+.btn_outline {
+    padding: 10px !important;
+
+    background: $white !important;
+    border: 1px solid $primaryColor !important;
+    border-radius: 8px !important;
+    color: $primaryColor !important;
+}
+
+.btn_small {
+    width: 133px !important;
+    height: 28px !important;
+}
+
+.btn_medium {
+    width: 152px !important;
+    height: 40px !important;
+}
+
+.btn_large {
+    width: 157px !important;
+    height: 54px !important;
+}

@@ -1,0 +1,47 @@
+@import "../../../styles/_themes";
+
+.wrapper_button {
+    max-width: 294px !important;
+}
+
+.modal_layout {
+    max-width: 519px !important;
+
+    @include respond("mobile") {
+        min-width: 336px !important;
+    }
+}
+
+.button_type {
+    border: none !important;
+}
+
+.integratelead_frame {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 24px 24px;
+    @include respond("mobile") {
+        padding: 2px 2px 15px;
+    }
+    .disconnectText{
+        color: red;
+    }
+}
+
+.text_resize {
+    line-height: 3.2rem;
+    @include respond("mobile") {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+}
+
+.text_connect_leads {
+    margin-top: 1.6rem;
+    @include respond("mobile") {
+        margin-top: 0.8rem;
+    }
+}
+.selector_frame {
+}

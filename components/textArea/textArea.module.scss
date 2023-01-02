@@ -1,0 +1,14 @@
+@import "../../styles/themes";
+
+.input__primary {
+    width: 100%;
+    border: 1px solid $borderColor !important;
+    border-radius: 6px !important;
+    padding: 10px 14px;
+    @extend .text_16_700;
+
+    &:focus {
+        outline: none;
+        border: 2px solid $primaryColor !important;
+    }
+}

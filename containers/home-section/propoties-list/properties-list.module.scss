@@ -1,0 +1,23 @@
+@import "../../../styles/_themes";
+
+.wrapper,
+.heading_wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @include respond("mobile") {
+        padding: 10px 16px;
+    }
+}
+
+.heading_wrapper {
+    margin-bottom: 16px;
+
+    @include respond("mobile") {
+        margin-bottom: 0px;
+
+        .heading_text {
+            max-width: 210px;
+        }
+    }
+}

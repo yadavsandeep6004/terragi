@@ -1,0 +1,32 @@
+@import "../../styles/themes";
+
+.referral_main_wrapper {
+
+    .refer_wrapper {
+        .refer_img {
+            max-width: 560px;
+
+            @include respond('mobile') {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .refer_code_input {
+            border: 1px solid $borderColor;
+            border-bottom-left-radius: 8px !important;
+            border-top-left-radius: 8px !important;
+            padding: 4px 12px;
+        }
+
+        .refer_code_copy_btn {
+            border-top-left-radius: 0px !important;
+            border-bottom-left-radius: 0px !important;
+        }
+    }
+
+      @include respond('mobile') {
+                height: auto;
+                background: none;
+            }
+}

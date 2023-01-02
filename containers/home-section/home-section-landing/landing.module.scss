@@ -1,0 +1,43 @@
+@import "../../../styles/_themes";
+
+.heading__container {
+    margin-bottom: 56px;
+
+    @include respond("mobile") {
+        margin-bottom: 32px;
+    }
+
+    .top_section {
+      z-index: 10;
+      height: 400px;
+
+      .heading_image_wrapper {
+        background-color: #3f96cb;
+        object-fit: contain;
+        width: 100%;
+        padding: 30px 0 30px 0;
+      }
+
+
+      @include respond("mobile") {
+          height: 270px;
+      }
+  }
+
+  .search_wrapper {
+      width: 100%;
+      max-width: 891px;
+      align-self: flex-end;
+      top: 100%;
+      transform: translateY(-50%);
+      padding: 0 16px;
+      margin-bottom: 10px;
+  }
+    .quick_search_wrapper {
+        padding: 56px 40px 0px;
+
+        @include respond("mobile") {
+            padding: 50px 16px 0px;
+        }
+    }
+}

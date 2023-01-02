@@ -1,0 +1,65 @@
+@import "../../styles/_themes";
+
+.wrapper {
+    width: 100%;
+    max-width: 1024px;
+    padding: 16px 21px;
+    background: $white;
+
+    .left__wrapper {
+        &__logo {
+            height: 48px;
+            width: 106px;
+            cursor: pointer;
+        }
+    }
+
+    .right_wrapper {
+        @include respond("tab") {
+            display: none;
+        }
+
+        .nav_list {
+            margin-right: 146px;
+
+            li {
+                margin-right: 48px;
+                font-size: 16px;
+
+                &:last-child {
+                    position: relative;
+                }
+
+                span {
+                    font-style: normal;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: $white;
+                    background: $coolPrimaryColorBackground;
+                    border-radius: 2px;
+                    position: absolute;
+                    top: -7px;
+                    padding: 2px;
+                }
+            }
+        }
+
+        .sing_up_btn {
+            background: transparent !important;
+            border: none;
+            color: $primaryColor !important;
+        }
+    }
+
+    @include respond("tab") {
+        display: none;
+    }
+}
+
+.dummy__block {
+    display: block;
+
+    @include respond("tab") {
+        display: none;
+    }
+}

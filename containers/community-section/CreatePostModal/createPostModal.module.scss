@@ -1,0 +1,52 @@
+@import "../../../styles/_themes";
+
+.wrapper {
+    padding: 20px;
+
+    .form {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
+
+        .input_wrapper {
+
+            &>div:nth-child(1),
+            &>div:nth-child(2) {
+                min-width: 237px;
+            }
+
+            .single_field {
+                flex-basis: calc(50% - 10px);
+            }
+
+            .priceWrapper {
+                p::after {
+                    content: "    (\20B9)";
+                }
+            }
+        }
+
+        .form_wrapper {
+            grid-template-columns: 1fr 1fr;
+
+            @include respond("tab") {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .button_wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+
+            .cancel_button {
+                background-color: transparent !important;
+                color: $primaryColor !important;
+            }
+        }
+    }
+
+
+    @include respond("tab") {
+        padding: 10px;
+    }
+}

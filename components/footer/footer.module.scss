@@ -1,0 +1,80 @@
+@import "../../styles/_themes";
+
+.footerSec {
+    margin: 116px 0 0px;
+    height: 387px;
+
+    @include respond("tab") {
+        margin-top: 86px;
+    }
+}
+
+.footer {
+    padding: 0px 20px 0 120px;
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr;
+
+    @include respond("tab") {
+        padding: 48px 16px 0px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.logo {
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+
+
+    @include respond("tab") {
+        grid-column-start: 1;
+        grid-column-end: 3
+    }
+}
+
+.text {
+    width: 359px;
+    height: 125px;
+    line-height: 24px;
+    text-align: justify;
+    padding-right: 20px;
+}
+
+.pageElement {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pages {
+    @include respond("tab") {
+        margin-top: 16px;
+        margin-bottom: 28px;
+
+        grid-row-start: 2;
+        grid-row-end: 3
+    }
+}
+
+.learnMoreElement {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.socialElements {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 22.99px;
+}
+
+.copyright {
+    margin: 66px 0 0 149px;
+}

@@ -1,0 +1,16 @@
+@import "../../../styles/_themes";
+
+.card_main {
+    padding: 42px;
+    height: 100%;
+
+    @include respond("mobile") {
+        padding: 16px;
+    }
+}
+
+.card_higlight {
+    background: $green100;
+    border-radius: 10px;
+    padding: 4px 8px;
+}

@@ -1,0 +1,40 @@
+@import "../../styles/_themes";
+
+.header {
+    position: sticky;
+    display: none;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    background-color: $white;
+    top: 0;
+
+    z-index: 10;
+
+    padding: 13px 16px;
+
+    &__logo {
+        height: 34px;
+        width: 75px;
+    }
+
+    @include respond("tab") {
+        display: flex;
+    }
+}
+
+.custom__sidebar {
+    top: 61px !important;
+    background-color: $white;
+    box-shadow: none !important;
+    border-right: 1px solid #E0E0E0;
+    padding: 16px;
+}
+
+.dummy__block {
+    width: "100%";
+    display: none;
+
+    @include respond("tab") {
+        display: block;
+    }
+}

@@ -1,0 +1,131 @@
+@import "../../styles/_themes";
+@import "../../styles/common";
+
+.rounded_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+
+    background-color: $white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 38px;
+
+    @include respond("mobile") {
+        padding: 5px;
+    }
+}
+.rounded_wrapper>div>div{
+    color: $blue500 !important;
+}
+
+.non_rounded_wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.search__input {
+    $searchLeftPadding: 10px;
+    $iconleftRightMargin: 12px;
+    $iconLeftDimension: 15px;
+    $rightButtonWidth: 50px;
+
+    @include respond("mobile") {
+        min-height: 40px !important;
+        $searchLeftPadding: 8px;
+        $iconleftRightMargin: 8px;
+
+        &>div:nth-of-type(1) {
+            font-size: 12px !important
+        }
+    }
+
+    display: inline-flex !important;
+    align-items: center;
+
+    width: 100%;
+    border-radius: inherit !important;
+    padding: 0px 0px 0px $searchLeftPadding !important;
+    border: 1px solid #E0E0E0 !important;
+    min-height: 50px !important;
+
+    flex-wrap: wrap;
+
+    input {
+        margin: 0 !important;
+    }
+
+    span+div {
+        position: absolute !important;
+        margin: 0 !important;
+        padding: 0px !important;
+        left: $searchLeftPadding+$iconleftRightMargin +$iconLeftDimension !important;
+
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+
+
+
+    &__icon__wrapper_right {
+        display: inline-flex !important;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 0 auto !important;
+        padding: 0 !important;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        width: 50px !important;
+
+        border-radius: 0 !important;
+        border-top-right-radius: inherit !important;
+        border-bottom-right-radius: inherit !important;
+
+        svg {
+            min-width: 20px !important;
+            height: 20px;
+        }
+
+        @include respond("mobile") {
+            width: 40px !important;
+        }
+    }
+
+    &__icon__wrapper_left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: $iconLeftDimension;
+        max-height: $iconLeftDimension;
+
+        margin: 0px $iconleftRightMargin 0px 0px;
+        order: -1;
+        height: 100%;
+        left: 16px;
+    }
+
+
+    // &>div:last-child {
+    //     position: absolute !important;
+    //     width: 100%;
+    //     background-color: $white !important;
+    //     border-radius: 8px !important;
+    //     border: none !important;
+    //     top: 53px !important;
+    //     min-height: fit-content;
+
+    //     &>div {
+    //         span {
+    //             @extend .text_16_700
+    //         }
+    //     }
+    // }
+}

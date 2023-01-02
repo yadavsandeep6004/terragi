@@ -1,0 +1,22 @@
+div{
+    .website{
+        .url{
+            color: blue;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+    .privacy{
+        padding-left: 50px;
+        li{
+            list-style-type: disc;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div.container{
+        width: 90%!important;
+        margin: auto!important;
+    }
+}

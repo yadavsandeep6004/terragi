@@ -1,0 +1,41 @@
+@import "../../../styles/_themes";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 42px 42px 50px;
+    max-width: 452px;
+    height: 375px;
+    justify-content: space-between;
+
+    @include respond("mobile") {
+        height: 100%;
+        padding: 16px 16px;
+        max-height: 299px;
+    }
+}
+
+.card_frame {
+    height: 100%;
+    align-items: center;
+    padding: 3.2rem;
+    gap: 2rem;
+    display: flex;
+
+    justify-content: center;
+
+    @include respond("mobile") {
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+.btn_resize {
+    height: 5.6rem;
+}
+
+.body_text {
+    line-height: 2.06rem;
+    margin-top: 0.3rem;
+}

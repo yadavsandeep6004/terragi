@@ -1,0 +1,37 @@
+@import "../../styles/themes";
+
+.input__primary {
+    height: 40px;
+    width: 100%;
+
+    input {
+        width: 100%;
+        border: 1px solid $borderColor !important;
+        border-radius: 6px !important;
+
+        @extend .text_16_700;
+
+        &:focus,
+        &:hover {
+            border-radius: 6px !important;
+            border-color: $coolBlack !important;
+        }
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        display: none;
+    }
+}
+
+.input__large {
+    max-width: 494px;
+}
+
+.input__medium {
+    max-width: 237px;
+}
+
+.input__small {
+    max-width: 155px;
+}

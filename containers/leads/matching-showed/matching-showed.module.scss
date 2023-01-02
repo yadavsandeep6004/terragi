@@ -1,0 +1,36 @@
+@import "../../../styles/_themes";
+
+.heading_frame {
+    padding: 36px 41px 24px;
+
+    @include respond("mobile") {
+        width: 100%;
+        padding: 12px 11px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+
+
+    .heading_wrapper,
+    .sort_by_wrapper {
+        @include respond("mobile") {
+            margin-left: auto;
+        }
+    }
+}
+
+.main_frame {
+    padding: 0px 41px;
+
+    @include respond("mobile") {
+        width: 100%;
+        padding: 12px 11px;
+    }
+}
+
+.image_icon {
+    width: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+}

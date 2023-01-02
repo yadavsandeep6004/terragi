@@ -1,0 +1,73 @@
+ @import "../../../styles/_themes";
+
+ .dropdown__label__wrapper {
+     display: flex !important;
+     justify-content: center;
+     align-items: center;
+
+     border-radius: 15px;
+     background: none;
+     box-shadow: none !important;
+     background-color: $blue100;
+     padding: 6px 8px;
+     gap: 12px;
+     height: 100%;
+ }
+
+ .modal_dropdown_wrapper {
+     flex-wrap: wrap !important;
+     height: fit-content !important;
+
+     input {
+         width: 0
+     }
+ }
+
+ .modal_dropdown {}
+
+ .modal_wrapper {
+     padding: 20px;
+     max-width: 774px;
+
+     .form_wrapper {
+         grid-template-columns: repeat(2, 1fr);
+         grid-row-gap: 20px;
+         grid-column-gap: 20px;
+
+
+         @include respond("mobile") {
+             grid-template-columns: repeat(1, 1fr);
+             grid-row-gap: 20px;
+             grid-column-gap: 20px;
+         }
+
+         .budget_input {
+             grid-column-start: 1;
+             grid-column-end: -1;
+         }
+     }
+
+     .button_wrapper {
+         display: flex;
+         justify-content: flex-end;
+         height: 54px;
+
+         margin-top: 24px;
+
+
+         .btn_cancel {
+             border: none !important;
+         }
+
+         .btn {
+             width: 100%;
+             max-width: 157px;
+
+             font-weight: 500 !important;
+         }
+     }
+
+     @include respond("mobile") {
+         padding: 10px;
+     }
+ }

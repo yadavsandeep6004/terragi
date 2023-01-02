@@ -1,0 +1,112 @@
+@import "../../styles/colors";
+@import "../../styles/themes";
+
+.wrapper {
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px $boxShadow;
+    background: $white;
+
+    .lead_details {
+        .custom_img {
+            width: 50px;
+            height: 50px;
+
+            p {
+                border-radius: 6px;
+            }
+        }
+
+        .tags_wrapper {
+            .tags {
+                background: $blue100;
+                width: 50px;
+                height: 30px;
+                border-radius: 15px;
+            }
+
+            .lead_dropdown {
+                height: 20px;
+                min-width: 20PX;
+                border: none;
+                padding: 0;
+                background: none;
+
+                @extend .text_16_700;
+
+                .divider .text,
+                span {
+                    @extend .text_16_700;
+                }
+
+                &:hover {
+                    background: none;
+                    box-shadow: none;
+                }
+
+                @include respond('mobile') {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                }
+            }
+
+            @include respond('mobile') {
+                margin: 8px 0 16px 50px;
+            }
+        }
+
+        @include respond('mobile') {
+            border-right: none;
+            flex-direction: column;
+        }
+    }
+
+    .btn_wrapper {
+        width: 100%;
+        max-width: 180px;
+
+        .showed_properties_btn {
+            margin-bottom: 12px;
+
+            @include respond('mobile') {
+                margin-bottom: 0;
+                padding: 7px 10px;
+                font-size: 14px;
+            }
+        }
+
+        .matching_properties_btn {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+
+            @include respond('mobile') {
+                padding: 7px 10px !important;
+                font-size: 14px !important;
+            }
+        }
+
+        @include respond('mobile') {
+            flex-direction: row;
+            max-width: 100%;
+            gap: 12px;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+    @include respond('mobile') {
+        padding: 12px;
+
+        position: relative;
+        flex-direction: column;
+    }
+
+    .locality_text_wrapper {
+        @include respond("sm-mobile") {
+            max-width: 217px;
+        }
+    }
+}

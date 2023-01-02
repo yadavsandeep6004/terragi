@@ -1,0 +1,55 @@
+@import "../../styles/_colors";
+
+.wrapper {
+    width: 100%;
+
+    .wrapper-child {
+        display: flex;
+        max-width: 237px;
+        height: 50px;
+        border-radius: 8px;
+        padding: 4px;
+        background-color: $blue100;
+        cursor: pointer;
+    }
+
+    .radio-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0px 20px;
+        max-width: 143px;
+
+        border-radius: 8px;
+        background-color: $white;
+
+        label {
+            font-size: 14px;
+            padding: 0 !important;
+            color: $primaryColor !important;
+            outline: none;
+            cursor: pointer;
+        }
+
+        label:hover {
+            color: $primaryColor;
+        }
+
+        label::before,
+        label::after {
+            display: none !important;
+        }
+    }
+
+    .radio-button[data-checked="true"] {
+        background-color: $white;
+        font-weight: 500;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .radio-button[data-checked="false"] {
+        background-color: $blue100;
+        font-weight: 400;
+    }
+}

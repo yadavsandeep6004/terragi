@@ -1,0 +1,33 @@
+@import "../../styles/_themes";
+
+.verification_modal {
+    max-width: 556px;
+}
+
+.childOtp {
+    width: 100%;
+
+    align-content: space-between;
+    gap: 2.5rem;
+
+    flex: 1;
+
+    &>div {
+        &>input {
+            width: 100% !important;
+            height: 100%;
+            border-radius: 6px !important;
+            border: 1px solid $borderColor;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        height: 40px;
+        flex: 2;
+    }
+}
+
+.verification_btn {
+    height: 56px;
+    margin-top: 56px !important;
+}

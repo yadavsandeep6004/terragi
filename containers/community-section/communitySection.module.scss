@@ -1,0 +1,29 @@
+@import "../../styles/themes";
+
+.header {
+    margin: 32px 40px 20px;
+
+
+
+    .create_post_button {
+        display: flex;
+        justify-content: flex-end;
+
+        // background: transparent !important;
+        .button {
+            background: transparent !important;
+            color: $primaryColor !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        @include respond("tab") {
+            flex-basis: 100%;
+        }
+    }
+
+    @include respond("tab") {
+        margin: 12px 16px 20px;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,57 @@
+@import "../../../styles/_themes";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
+.image_hidden_div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(179.11deg,
+            rgba(255, 255, 255, 0) 21.54%,
+            rgba(37, 37, 37, 0.830998) 83.8%,
+            #373435 96.47%);
+    border-radius: 4px,
+}
+
+.view_wrapper {
+    display: flex;
+    background: $darkBackground;
+    width: 100%;
+    max-width: 162px;
+    height: 24px;
+    border-radius: 15px;
+
+    bottom: 15px;
+    left: 8px;
+
+    svg {
+        @include respond("tab") {
+            min-width: 14px;
+            min-height: 10px;
+        }
+    }
+
+    &_text {
+        font-size: 10px;
+    }
+
+    @include respond("tab") {
+        padding: 4px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+
+
+.text {
+    margin-left: 16px;
+    width: 217px;
+}

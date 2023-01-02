@@ -1,0 +1,16 @@
+@import "../../styles/_themes";
+
+.payments_container {
+    @include respond("tab") {
+        flex-direction: column;
+    }
+}
+
+.modal__container {
+    padding: 52px 30px 32px;
+    max-width: 335px !important;
+}
+
+.card_container {
+    max-width: 452px;
+}

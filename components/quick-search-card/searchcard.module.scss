@@ -1,0 +1,50 @@
+@import "../../styles/_themes";
+
+.div_container {
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    // flex: 1;
+
+    .circular_pic {
+        clip-path: circle(50%);
+
+        position: relative;
+
+        margin-bottom: 16px;
+
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        .circular_pic_div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            border-radius: 50%;
+        }
+
+        @include respond("mobile") {
+            width: 56px;
+            height: 56px;
+        }
+    }
+
+    .text_container {
+        max-width: 120px;
+
+        @include respond("mobile") {
+            p {
+                font-size: 1.1rem;
+                font-weight: 500;
+                line-height: 16px;
+                max-width: 60px;
+            }
+        }
+    }
+}

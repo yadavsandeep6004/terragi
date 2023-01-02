@@ -1,0 +1,42 @@
+@import "../../styles//themes";
+
+
+.upload_photo_wrapper {
+    input[type="file"] {
+        display: none;
+    }
+
+    .upload_photo_btn {
+        margin-left: 12px !important;
+        padding: 12px 27px !important;
+        border: 1px solid $primaryColor;
+        border-radius: 8px;
+        color: $primaryColor;
+        cursor: pointer;
+    }
+}
+
+.profile_form_wrapper {
+    max-width: 728px;
+    position: relative;
+
+    @include respond('mobile') {
+        padding-bottom: 14px;
+    }
+
+    .country_code_wrapper {
+        max-width: 100px;
+    }
+
+    .save_btn {
+        margin-top: 24px;
+        margin-left: auto;
+
+        @include respond('mobile') {
+            position: relative;
+            margin-top: 21px !important;
+            width: 100% !important;
+            padding: 17px !important;
+        }
+    }
+}

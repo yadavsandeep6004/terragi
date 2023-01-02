@@ -1,0 +1,13 @@
+@import "../../styles/_themes";
+
+.wrapper {
+    min-width: 375px;
+
+    .header_container {
+        padding-left: 255px;
+
+        @include respond("tab") {
+            padding-left: 0px;
+        }
+    }
+}
